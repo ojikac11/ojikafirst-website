@@ -543,21 +543,25 @@ COJIKA INTERCONTINENTAL LIMITED, we have all  professionals at hand in divers fi
   <!-- Contact Form JavaScript File -->
   <!-- <script src="contactform/contactform.js"></script> -->
   <script src="https://smtpjs.com/v3/smtp.js"></script>
+
   <script>
     function sendEmail(){
-      Email.send({
-          Host : "smtp.elasticemail.com",
-          Username : "gideoncomputerscience@gmail,com",
-          Password : "shadowhunter1.",
-          To : 'g.altimate123@gmail.com',
+            Email.send({
+          SecureToken : "e0391bde-f6b5-42ff-aaa7-2f0ae7581d55",
+          To : 'info@cojikaintercontinentallimited.com',
           From : document.getElementById("email").value,
           Subject : "New Contact Form Enqiry",
-          Body : "And this is the body"
+          Body : "Name: " + document.getElementById("name").value
+              + "<br> Email: " + document.getElementById("email").value
+              + "<br> Phone no: " + document.getElementById("phone").value
+              + "<br> Message: " + document.getElementById("message").value
       }).then(
-        message => alert(message)
+        message => alert("Message Sent Successfully")
       );
     }
   </script>
+
+
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
