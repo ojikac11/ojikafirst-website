@@ -448,19 +448,19 @@
                   <div class="row">
                     <div class="col-md-12 mb-1">
                       <div class="form-group">
-                        <input type="text" class="form-control form-control-lg form-control-a" id="inputName"
+                        <input type="text" class="form-control form-control-lg form-control-a" id="name"
                           placeholder="Name *" required>
                       </div>
                     </div>
                     <div class="col-md-12 mb-1">
                       <div class="form-group">
-                        <input type="email" class="form-control form-control-lg form-control-a" id="inputEmail1"
+                        <input type="email" class="form-control form-control-lg form-control-a" id="email"
                           placeholder="Email *" required>
                       </div>
                     </div>
                     <div class="col-md-12 mb-1">
                       <div class="form-group">
-                        <textarea id="textMessage" class="form-control" placeholder="Comment *" name="message" cols="45"
+                        <textarea id="message" class="form-control" placeholder="Comment *" name="message" cols="45"
                           rows="8" required></textarea>
                       </div>
                     </div>
@@ -647,26 +647,23 @@
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/scrollreveal/scrollreveal.min.js"></script>
   <!-- Contact Form JavaScript File -->
-  <script src=" https://smtpjs.com/v3/smtp.js"></script>
-  <script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-    function sendEmail(){
-      Email.send({
-          Host : "smtp.gmail.com",
-          Username : "gideoncomputerscience@gmail.com",
-          Password : "merlinmerlin1.",
-          To : 'g.altimate123@gmail.com',
-          From : document.getElementById("email").value,
-          Subject : "New Contact Form Enquiry",
-          Body : "And this is the body"
-          //   + "<br> Email: " + document.getElementById("email").value
-          //   + "<br> Phone no: " + document.getElementById("phone").value
-          //   + "<br> Message: " + document.getElementById("email").value
-      }).then(
-        message => alert(message)
-      );
-    }
-  </script>
+   <script>
+     function sendEmail(){
+             Email.send({
+           SecureToken : "e0391bde-f6b5-42ff-aaa7-2f0ae7581d55",
+           To : 'info@cojikaintercontinentallimited.com',
+           From : document.getElementById("email").value,
+           Subject : "New Contact Form Enqiry",
+           Body : "Name: " + document.getElementById("name").value
+               + "<br> Email: " + document.getElementById("email").value
+               + "<br> Message: " + document.getElementById("message").value
+       }).then(
+         message => alert("Message Sent Successfully")
+       );
+     }
+   </script>
 
 
   <!-- Template Main Javascript File -->
