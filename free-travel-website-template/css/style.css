@@ -5845,7 +5845,7 @@ a.close.disabled {
 
 .carousel-inner {
   position: relative;
-  width: 100%;
+  width: 100%;carousel-control-prev
   overflow: hidden;
 }
 
@@ -5928,6 +5928,7 @@ a.close.disabled {
   text-align: center;
   opacity: 0.5;
   transition: opacity 0.15s ease;
+  display: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
